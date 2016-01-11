@@ -1,0 +1,29 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <h1>Noticias</h1>
+
+        {% for entity in entities %}
+            {{ entity.id }}-
+            {{ entity.titulo }}<br>
+            <b>Genero:</b><u>{{ entity.categoria }}</u><br>
+            <img src="{{ asset('bundles/unipeliculas/imagenes/'~ entity.foto  ~ '') }}" width=15% height=15%/>
+            
+            
+                <ul>
+                    <li>
+                        <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+        {% endfor %}
+        
+
+        <ul>
+        <li>
+            <a href="{{ path('noticias_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

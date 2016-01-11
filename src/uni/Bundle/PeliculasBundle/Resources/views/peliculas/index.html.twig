@@ -1,0 +1,27 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+{% block cuerpo -%}
+    <h1> Lista de Peliculas</h1>
+        {% for entity in entities %}
+            <div id="col"> 
+           {{ entity.id }}-
+            <a href="{{ path('peliculas_show', { 'id': entity.id }) }}">{{ entity.titulo }}</a><br>
+            <ul>
+            <li><b>Genero:</b><u>{{ entity.categoriass.titulo }}</u><br>
+            </li>
+            </ul>
+            <img src="{{ asset('bundles/unipeliculas/imagenes/'~ entity.foto  ~ '') }}" width=15% height=15%/><br>
+            <ul>
+            <li><b>Comentario:</b><br>-{{ entity.comentario.nombre }}:{{ entity.comentario.descripcion}}
+            </li>
+            </ul>
+            </div>
+        {% endfor %}
+        
+        <ul>       
+            <li>    <a href="{{ path('peliculas_new') }}">
+                Create a new entry
+            </li>
+</ul>
+        
+    {% endblock %}

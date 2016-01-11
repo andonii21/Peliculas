@@ -1,0 +1,10 @@
+peliculas:
+    path:     /
+    defaults: { _controller: "uniPeliculasBundle:peliculas:index" }
+
+peliculas_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniPeliculasBundle:peliculas:show" }
+uni_marca_peliculas:
+    resource: "@uniPeliculasBundle/Resources/config/routing/conSeguridad/peliculasSeguridad.yml"
+    prefix:   /conSeguridad

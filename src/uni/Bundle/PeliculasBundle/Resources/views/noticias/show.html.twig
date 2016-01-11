@@ -1,0 +1,23 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+{% block cuerpo -%}
+    
+    <h3>{{ entity.titulo }}</h3>
+    {{ entity.descripcion }}<br>
+    <img src="{{ asset('bundles/unipeliculas/imagenes/'~ entity.foto  ~ '') }}" width=15% height=15%/>
+            
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('noticias') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('noticias_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,23 @@
+
+peliculas_new:
+    path:     /new
+    defaults: { _controller: "uniPeliculasBundle:peliculas:new" }
+
+peliculas_create:
+    path:     /create
+    defaults: { _controller: "uniPeliculasBundle:peliculas:create" }
+    requirements: { _method: post }
+
+peliculas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniPeliculasBundle:peliculas:edit" }
+
+peliculas_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniPeliculasBundle:peliculas:update" }
+    requirements: { _method: post|put }
+
+peliculas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniPeliculasBundle:peliculas:delete" }
+    requirements: { _method: post|delete }

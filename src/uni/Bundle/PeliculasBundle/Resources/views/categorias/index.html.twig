@@ -1,0 +1,28 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+{% block cuerpo -%}
+    <h1>Categorias</h1>
+        
+        {% for entity in entities %}
+            
+            {{ entity.id }}-
+            {{ entity.titulo }}<br>
+            {{ entity.descripcion }}<br>
+               
+                <ul>
+                    <li>
+                        <a href="{{ path('categorias_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+
+        <ul>
+        <li>
+            <a href="{{ path('categorias_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

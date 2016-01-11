@@ -1,0 +1,23 @@
+
+comentarios_new:
+    path:     /new
+    defaults: { _controller: "uniPeliculasBundle:comentarios:new" }
+
+comentarios_create:
+    path:     /create
+    defaults: { _controller: "uniPeliculasBundle:comentarios:create" }
+    requirements: { _method: post }
+
+comentarios_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "uniPeliculasBundle:comentarios:edit" }
+
+comentarios_update:
+    path:     /{id}/update
+    defaults: { _controller: "uniPeliculasBundle:comentarios:update" }
+    requirements: { _method: post|put }
+
+comentarios_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "uniPeliculasBundle:comentarios:delete" }
+    requirements: { _method: post|delete }

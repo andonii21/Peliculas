@@ -1,0 +1,12 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+    <br>Buscar titulo:
+<form action="{{path('noticias_responder_titulolike')}}" method="POST">
+    <input type="text" name="titulo" value="Titulo a buscar like">
+    <input type="submit" value="OK">
+</form>
+      
+    
+{% endblock %}

@@ -1,0 +1,61 @@
+#titulo
+{
+background-color:#2B73F0;
+text-align:center;
+}
+#cuerpo
+{
+background-color:#AAC8FA;
+text-align:center;
+}
+#pie
+{
+background-color:#2B73F0;
+}
+#nav {
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color:#6C9FF7;
+		border-bottom: 1px solid #999;
+		}
+	
+	#nav li { 
+		float: left;
+		margin: 0;
+		padding: 0;
+		}
+	
+	#nav a {
+		float: left;
+		display: block;
+		padding: 6px 30px 6px 5px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 90%;
+		color: #030509;
+		background-color:#6C9FF7;
+		}
+	
+	#nav #nav-1 a {
+		padding-left: 400px;
+		}
+	
+	#nav a:hover {
+		color: #000;
+		}
+                
+#col{
+position:relative;
+margin-left:5%;
+overflow:auto;
+display:block;
+width:70%;
+          }
+
+
+
+
+

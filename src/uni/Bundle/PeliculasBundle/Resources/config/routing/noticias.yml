@@ -1,0 +1,20 @@
+noticias:
+    path:     /
+    defaults: { _controller: "uniPeliculasBundle:noticias:index" }
+
+noticias_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniPeliculasBundle:noticias:show" }
+    
+noticias_buscar_titulolike:
+    path:     /buscartitulolike
+    defaults: { _controller: "uniPeliculasBundle:noticias:buscarTitulolike" }
+    
+noticias_responder_titulolike:
+    path:     /respondertitulolike
+    defaults: { _controller: "uniPeliculasBundle:noticias:responderTitulolike" }
+
+uni_marca_noticias:
+    resource: "@uniPeliculasBundle/Resources/config/routing/conSeguridad/noticiasSeguridad.yml"
+    prefix:   /conSeguridad
+    

@@ -1,0 +1,4 @@
+uni_peliculas:
+    resource: "@uniPeliculasBundle/Resources/config/routing.yml"
+    prefix:   /
+

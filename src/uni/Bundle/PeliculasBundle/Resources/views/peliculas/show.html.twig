@@ -1,0 +1,29 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+{% block cuerpo -%}
+    <h3>{{ entity.titulo }}</h3>
+                  
+           <img src="{{ asset('bundles/unipeliculas/imagenes/'~ entity.foto  ~ '') }}" width=10% height=10%/><br>
+           
+           {{ entity.descripcion }}<br><br>
+
+         
+           
+            
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('peliculas') }}">
+            Volver a la pagina principal
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('peliculas_edit', { 'id': entity.id }) }}">
+            Edit
+        </a><br>
+        
+        <a href="{{ path('comentarios_new') }}">
+                Create a new entry
+      
+</ul>
+
+ {% endblock%}

@@ -1,0 +1,15 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+{% block cuerpo -%}
+    <h1>peliculas creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('peliculas') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'uniPeliculasBundle::layout.html.twig' %}
+
+
+{% block cuerpo -%}
+     <h3>Listado de noticias con este titulo: {{tit}}</h3>
+ <tbody>
+        {% for entity in tabla %}
+            
+            
+        <h3><a href="{{ path('noticias_show', { 'id': entity.id }) }}">{{ entity.titulo }}</a></h3>
+        
+        <img src="{{ asset('bundles/unipeliculas/imagenes/'~ entity.foto  ~ '') }}" width=20% height=20%/>
+        <br><br>
+        
+        {% endfor %}
+        </tbody>
+  
+
+        <ul>
+        <li>
+            <a href="{{ path('noticias_new') }}">
+                Create a new entry
+            </a>
+        </li> 
+        
+    </ul>
+      
+    
+{% endblock %}

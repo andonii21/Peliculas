@@ -1,0 +1,11 @@
+comentarios:
+    path:     /
+    defaults: { _controller: "uniPeliculasBundle:comentarios:index" }
+
+comentarios_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniPeliculasBundle:comentarios:show" }
+
+uni_marca_comentarios:
+    resource: "@uniPeliculasBundle/Resources/config/routing/conSeguridad/comentariosSeguridad.yml"
+    prefix:   /conSeguridad

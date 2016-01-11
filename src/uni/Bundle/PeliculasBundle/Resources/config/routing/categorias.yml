@@ -1,0 +1,11 @@
+categorias:
+    path:     /
+    defaults: { _controller: "uniPeliculasBundle:categorias:index" }
+
+categorias_show:
+    path:     /{id}/show
+    defaults: { _controller: "uniPeliculasBundle:categorias:show" }
+
+uni_marca_categorias:
+    resource: "@uniPeliculasBundle/Resources/config/routing/conSeguridad/categoriasSeguridad.yml"
+    prefix:   /conSeguridad
